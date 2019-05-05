@@ -2,8 +2,6 @@ package com.example.perfectpitchcoach
 
 import org.junit.Assert
 import org.junit.Test
-import java.util.Arrays.asList
-
 
 
 class PitchParserTest {
@@ -44,13 +42,18 @@ class PitchParserTest {
     }
 
     @Test
+    fun getMidiBaseFromPitch() {
+        Assert.assertEquals(0, PitchParser.getMidiBaseFromPitch("c''"))
+        Assert.assertEquals(11, PitchParser.getMidiBaseFromPitch("h"))
+    }
+
+    @Test
     fun getMidiListFromPitchList() {
         Assert.assertTrue(listOf(60, 62, 64).equals(PitchParser.getMidiListFromPitchList(listOf("c'", "d'", "e'"))))
     }
 
     @Test
-    fun getMidiBaseFromPitch() {
-        Assert.assertEquals(0, PitchParser.getMidiBaseFromPitch("c''"))
-        Assert.assertEquals(11, PitchParser.getMidiBaseFromPitch("h"))
+    fun getPitchListFromMidiList(){
+        Assert.assertTrue(listOf("c'", "d'", "e'").equals(PitchParser.getPitchListFromMidiList(listOf(60, 62, 64))))
     }
 }

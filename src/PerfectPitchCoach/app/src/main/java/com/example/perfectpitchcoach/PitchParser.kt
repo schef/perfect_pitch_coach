@@ -82,6 +82,11 @@ class PitchParser {
             return ""
         }
 
+        fun getMidiBaseFromPitch(pitch: String): Int {
+            val midi = getMidiFromPitch(pitch)
+            return getMidiBaseFromMidi(midi)
+        }
+
         fun getMidiListFromPitchList(pitchList: List<String>): List<Int> {
             var midiList = arrayListOf<Int>()
             for (pitch in pitchList) {
@@ -90,9 +95,21 @@ class PitchParser {
             return midiList
         }
 
-        fun getMidiBaseFromPitch(pitch: String): Int {
-            val midi = getMidiFromPitch(pitch)
-            return getMidiBaseFromMidi(midi)
+        fun getPitchListFromMidiList(midiList: List<Int>): List<String> {
+            var pitchList = arrayListOf<String>()
+            for (midi in midiList) {
+                pitchList.add(getPitchFromMidi(midi))
+            }
+            return pitchList
+        }
+
+        //TODO:
+        fun isPitchValid(){
+
+        }
+
+        fun isMidiValid(){
+
         }
 
     }
