@@ -1,2 +1,2 @@
-# perfect_pitch_trainer_android
-Perfect Pitch Trainer based on David Lucas Burge 
+# perfect_pitch_coach
+Perfect Pitch Coach based on David Lucas Burge Pefect Pitch Masterclass
