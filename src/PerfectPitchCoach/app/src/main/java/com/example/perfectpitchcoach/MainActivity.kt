@@ -16,6 +16,9 @@ class MainActivity : AppCompatActivity() {
         val etLog = findViewById<EditText>(R.id.etLog)
         val btnMidiToPitch = findViewById<Button>(R.id.btnMidiToPitch)
         val btnPitchToMidi = findViewById<Button>(R.id.btnPitchToMidi)
+        val btnPlayNotesMelodicly = findViewById<Button>(R.id.btnPlayNotesMelodicly)
+        val btnPlayNotesHarmonicly = findViewById<Button>(R.id.btnPlayNotesHarmonicly)
+        MidiPlayer
 
         btnMidiToPitch?.setOnClickListener {
             //TODO: is there a oneliner?
@@ -29,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             }
             val pitchList = PitchParser.getPitchListFromMidiList(midiList)
             val pitchString = pitchList.joinToString(" ")
-            tvLog.setText(pitchString!!)
+            tvLog.setText(pitchString)
         }
 
         btnPitchToMidi?.setOnClickListener {
@@ -37,6 +40,14 @@ class MainActivity : AppCompatActivity() {
             val midiList = PitchParser.getMidiListFromPitchList(textList)
             val midiString = midiList.joinToString(" ")
             tvLog.setText(midiString)
+        }
+
+        btnPlayNotesMelodicly?.setOnClickListener {
+            MidiPlayer.playMultipleNotesMelodicly(etLog.getText().split(" "))
+        }
+
+        btnPlayNotesHarmonicly?.setOnClickListener {
+            MidiPlayer.playMultipleNotesHarmonicly(etLog.getText().split(" "))
         }
     }
 }

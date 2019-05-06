@@ -73,6 +73,22 @@
                 android:textSize="20dp"
                 android:text="pitch to midi"
         />
+        <Button
+                android:id="@+id/btnPlayNotesMelodicly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="20dp"
+                android:text="play notes melodicly"
+        />
+        <Button
+                android:id="@+id/btnPlayNotesHarmonicly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="20dp"
+                android:text="play notes harmonicly"
+        />
     </LinearLayout>
 
 
