@@ -29,7 +29,7 @@ class MidiPlayer {
         @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
         val soundPool = SoundPool.Builder()
             .setAudioAttributes(attributes)
-            .setMaxStreams(5)
+            .setMaxStreams(7)
             .build();
 
         fun getResNote(midi: Int): Int {
