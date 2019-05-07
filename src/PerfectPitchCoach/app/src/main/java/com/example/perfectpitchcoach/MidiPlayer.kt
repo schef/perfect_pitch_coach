@@ -19,6 +19,7 @@ class MidiPlayer {
         val firstTone = 21
         val lastTone = 108
         var streamId = mutableMapOf<Int, Int>()
+        var loadedSoundCount = 0
 
         @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
         var attributes = AudioAttributes.Builder()
@@ -41,25 +42,31 @@ class MidiPlayer {
                 soundPool.load(App.ref, getResNote(x), 1)
             }
             soundPool.setOnLoadCompleteListener(SoundPool.OnLoadCompleteListener { soundPool, sampleId, status ->
-//                Toast.makeText(
-//                    App.ref,
-//                    "Sound load finished",
-//                    Toast.LENGTH_SHORT
-//                ).show()
+
+                loadedSoundCount++
+                if (loadedSoundCount >= (lastTone - firstTone)){
+                Toast.makeText(
+                    App.ref,
+                    "Sound load finished",
+                    Toast.LENGTH_SHORT
+                ).show()
+                }
                 Log.e("MidiPlayer", soundPool.toString() + sampleId.toString() + status.toString())
             })
         }
 
         fun noteOn(midi: Int) {
             Log.e("MidiPlayer", "noteOn: " + midi.toString())
-            val id = soundPool.play(midi - firstTone, 1F, 1F, 1, 0, 1F)
-            streamId.put(midi, id)
+            val sndId = midi - firstTone + 1
+            val strId = soundPool.play(sndId, 1F, 1F, 1, 0, 1F)
+            streamId.put(sndId, strId)
         }
 
         fun noteOff(midi: Int) {
             Log.e("MidiPlayer", "noteOff: " + midi.toString())
-            soundPool.stop(streamId[midi]!!)
-            streamId.remove(midi)
+            val sndId = midi - firstTone + 1
+            soundPool.stop(streamId[sndId]!!)
+            streamId.remove(sndId)
         }
 
         fun playMultipleNotesMelodicly(pitchList: List<String>) {
@@ -79,7 +86,7 @@ class MidiPlayer {
             for (pitch in pitchList) {
                 val midi = PitchParser.getMidiFromPitch(pitch)
                 noteOn(midi)
-                Timer().schedule(noteDuration) {
+                Timer().schedule((noteDuration * 2.0).toLong()) {
                     noteOff(midi)
                 }
             }
