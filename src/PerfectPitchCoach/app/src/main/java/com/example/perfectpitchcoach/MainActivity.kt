@@ -14,10 +14,10 @@ class MainActivity : AppCompatActivity() {
 
         val tvLog = findViewById<TextView>(R.id.tvLog)
         val etLog = findViewById<EditText>(R.id.etLog)
-        val btnMidiToPitch = findViewById<Button>(R.id.btnMidiToPitch)
-        val btnPitchToMidi = findViewById<Button>(R.id.btnPitchToMidi)
-        val btnPlayNotesMelodicly = findViewById<Button>(R.id.btnPlayNotesMelodicly)
-        val btnPlayNotesHarmonicly = findViewById<Button>(R.id.btnPlayNotesHarmonicly)
+        val btnMidiToPitch = findViewById<TextView>(R.id.btnMidiToPitch)
+        val btnPitchToMidi = findViewById<TextView>(R.id.btnPitchToMidi)
+        val btnPlayNotesMelodicly = findViewById<TextView>(R.id.btnPlayNotesMelodicly)
+        val btnPlayNotesHarmonicly = findViewById<TextView>(R.id.btnPlayNotesHarmonicly)
         MidiPlayer
 
         btnMidiToPitch?.setOnClickListener {

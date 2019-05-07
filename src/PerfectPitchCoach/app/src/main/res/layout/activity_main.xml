@@ -5,89 +5,155 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/commodore64_14"
         tools:context=".MainActivity">
 
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:layout_margin="@dimen/commodore64_empty_row_size"
+            android:background="@color/commodore64_06"
     >
 
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:fontFamily="monospace"
-                android:textSize="20dp"
                 android:text="Log:"
+
+                android:fontFamily="@font/c64_pro"
+                android:textColor="@color/commodore64_14"
+                android:textSize="@dimen/commodore64_font_size"
+                android:textAllCaps="true"
+                android:layout_marginLeft="@dimen/commodore64_empty_row_size"
+                android:layout_marginRight="@dimen/commodore64_empty_row_size"
         />
+
+
 
         <TextView
                 android:id="@+id/tvLog"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
-                android:background="@color/terminalBg"
-                android:textColor="@color/terminalFg"
-                android:textSize="20dp"
-                android:fontFamily="monospace"
                 android:text="Here goes log output!"
+
+                android:fontFamily="@font/c64_pro"
+                android:textColor="@color/commodore64_14"
+                android:textSize="@dimen/commodore64_font_size"
+                android:textAllCaps="true"
+                android:layout_marginLeft="@dimen/commodore64_empty_row_size"
+                android:layout_marginRight="@dimen/commodore64_empty_row_size"
+        />
+
+        <View android:layout_width="match_parent"
+              android:layout_height="@dimen/commodore64_empty_row_size"
         />
 
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:fontFamily="monospace"
-                android:textSize="20dp"
                 android:text="Input:"
+
+                android:fontFamily="@font/c64_pro"
+                android:textColor="@color/commodore64_14"
+                android:textSize="@dimen/commodore64_font_size"
+                android:textAllCaps="true"
+                android:layout_marginLeft="@dimen/commodore64_empty_row_size"
+                android:layout_marginRight="@dimen/commodore64_empty_row_size"
         />
 
         <EditText
                 android:id="@+id/etLog"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
-                android:background="@color/terminalBg"
-                android:textColor="@color/terminalFg"
-                android:textSize="20dp"
-                android:fontFamily="monospace"
-                android:tooltipText="Here goes your input!"
+
+                android:fontFamily="@font/c64_pro"
+                android:textColor="@color/commodore64_14"
+                android:textSize="@dimen/commodore64_font_size"
+                android:textAllCaps="true"
+                android:layout_marginLeft="@dimen/commodore64_empty_row_size"
+                android:layout_marginRight="@dimen/commodore64_empty_row_size"
         />
 
-        <Button
+        <View android:layout_width="match_parent"
+              android:layout_height="@dimen/commodore64_empty_row_size"
+        />
+
+        <TextView
                 android:id="@+id/btnMidiToPitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:textSize="20dp"
                 android:text="midi to pitch"
+
+                android:fontFamily="@font/c64_pro"
+                android:textColor="@color/commodore64_14"
+                android:textSize="@dimen/commodore64_font_size"
+                android:textAllCaps="true"
+                android:background="@color/commodore64_03"
+                android:layout_marginLeft="@dimen/commodore64_empty_row_size"
+                android:layout_marginRight="@dimen/commodore64_empty_row_size"
         />
-        <Button
+
+        <View android:layout_width="match_parent"
+              android:layout_height="@dimen/commodore64_empty_row_size"
+        />
+
+        <TextView
                 android:id="@+id/btnPitchToMidi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:textSize="20dp"
                 android:text="pitch to midi"
+
+                android:fontFamily="@font/c64_pro"
+                android:textColor="@color/commodore64_14"
+                android:textSize="@dimen/commodore64_font_size"
+                android:textAllCaps="true"
+                android:background="@color/commodore64_03"
+                android:layout_marginLeft="@dimen/commodore64_empty_row_size"
+                android:layout_marginRight="@dimen/commodore64_empty_row_size"
         />
-        <Button
+
+        <View android:layout_width="match_parent"
+              android:layout_height="@dimen/commodore64_empty_row_size"
+        />
+
+        <TextView
                 android:id="@+id/btnPlayNotesMelodicly"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:textSize="20dp"
                 android:text="play notes melodicly"
+
+                android:fontFamily="@font/c64_pro"
+                android:textColor="@color/commodore64_14"
+                android:textSize="@dimen/commodore64_font_size"
+                android:textAllCaps="true"
+                android:background="@color/commodore64_03"
+                android:layout_marginLeft="@dimen/commodore64_empty_row_size"
+                android:layout_marginRight="@dimen/commodore64_empty_row_size"
         />
-        <Button
+
+        <View android:layout_width="match_parent"
+              android:layout_height="@dimen/commodore64_empty_row_size"
+        />
+
+        <TextView
                 android:id="@+id/btnPlayNotesHarmonicly"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:textSize="20dp"
                 android:text="play notes harmonicly"
+
+                android:fontFamily="@font/c64_pro"
+                android:textColor="@color/commodore64_14"
+                android:textSize="@dimen/commodore64_font_size"
+                android:textAllCaps="true"
+                android:background="@color/commodore64_03"
+                android:layout_marginLeft="@dimen/commodore64_empty_row_size"
+                android:layout_marginRight="@dimen/commodore64_empty_row_size"
         />
     </LinearLayout>
 
