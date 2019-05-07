@@ -1,5 +1,6 @@
 package com.example.perfectpitchcoach
 
+import android.util.Log
 import kotlin.math.abs
 
 class PitchParser {
@@ -20,6 +21,7 @@ class PitchParser {
             "a" to 9,
             "ais" to 10,
             "h" to 11,
+
             "des" to 1,
             "es" to 3,
             "ges" to 6,
@@ -103,12 +105,60 @@ class PitchParser {
             return pitchList
         }
 
-        //TODO:
-        fun isPitchValid(){
+        fun isPitchValid(pitch: String): Boolean {
+            var pitchBase: String = ""
+            var pitchOctaveUp: Int = 0
+            var pitchOctaveDown: Int = 0
 
+            var iterateIndex = 0
+            var charIndex = 0
+            var octaveIndex = 0
+
+            for (char in pitch) {
+                iterateIndex++
+                if (char.isLetter()) {
+                    charIndex = iterateIndex
+                    pitchBase += char
+                } else if (char.equals('\'')) {
+                    octaveIndex = iterateIndex
+                    pitchOctaveUp++
+                } else if (char.equals(',')) {
+                    octaveIndex = iterateIndex
+                    pitchOctaveDown++
+                } else {
+//                    println("Not a valid char: " + pitch)
+                    return false
+                }
+
+                if (octaveIndex < charIndex && octaveIndex > 0) {
+//                    println("Wrong order, octave before pitch or pitch after octave: " + pitch)
+                    return false
+                }
+            }
+
+            if (!pitchMidiBase.containsKey(pitchBase)) {
+//                println("Not a valid pitch: " + pitch)
+                return false
+            }
+            if (pitchOctaveUp > 0 && pitchOctaveDown > 0) {
+//                println("Not a valid octave: " + pitch)
+                return false
+            }
+
+            return true
         }
 
-        fun isMidiValid(){
+        fun isPitchListValid(pitchList: List<String>): Boolean {
+            for (pitch in pitchList){
+                if (!isPitchValid(pitch)){
+                    return false
+                }
+            }
+            return true
+        }
+
+        //TODO: implement if needed?
+        fun isMidiValid() {
 
         }
 

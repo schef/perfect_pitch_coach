@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         btnMidiToPitch?.setOnClickListener {
             //TODO: is there a oneliner?
-            var midiList = arrayListOf<Int>()
+            val midiList = arrayListOf<Int>()
             val textList = etLog.text.split(" ")
             for (text in textList) {
                 val number = text.toIntOrNull()
@@ -31,23 +31,34 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             val pitchList = PitchParser.getPitchListFromMidiList(midiList)
-            val pitchString = pitchList.joinToString(" ")
-            tvLog.setText(pitchString)
+            val tvString = pitchList.joinToString(" ")
+            tvLog.setText(tvString)
         }
 
         btnPitchToMidi?.setOnClickListener {
-            var textList = etLog.text.split(" ")
-            val midiList = PitchParser.getMidiListFromPitchList(textList)
-            val midiString = midiList.joinToString(" ")
-            tvLog.setText(midiString)
+            val pitchList = etLog.text.split(" ")
+            var tvString = ""
+            if (PitchParser.isPitchListValid(pitchList)) {
+                val midiList = PitchParser.getMidiListFromPitchList(pitchList)
+                tvString = midiList.joinToString(" ")
+            } else {
+                tvString = "Syntax error"
+            }
+            tvLog.setText(tvString)
         }
 
         btnPlayNotesMelodicly?.setOnClickListener {
-            MidiPlayer.playMultipleNotesMelodicly(etLog.getText().split(" "))
+            val pitchList = etLog.getText().split(" ")
+            if (PitchParser.isPitchListValid(pitchList)) {
+                MidiPlayer.playMultipleNotesMelodicly(pitchList)
+            }
         }
 
         btnPlayNotesHarmonicly?.setOnClickListener {
-            MidiPlayer.playMultipleNotesHarmonicly(etLog.getText().split(" "))
+            val pitchList = etLog.getText().split(" ")
+            if (PitchParser.isPitchListValid(pitchList)) {
+                MidiPlayer.playMultipleNotesHarmonicly(pitchList)
+            }
         }
     }
 }

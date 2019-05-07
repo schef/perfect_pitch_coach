@@ -56,4 +56,21 @@ class PitchParserTest {
     fun getPitchListFromMidiList(){
         Assert.assertTrue(listOf("c'", "d'", "e'").equals(PitchParser.getPitchListFromMidiList(listOf(60, 62, 64))))
     }
+
+    @Test
+    fun isPitchValid(){
+        Assert.assertEquals(false, PitchParser.isPitchValid("cs"))
+        Assert.assertEquals(false, PitchParser.isPitchValid("c',"))
+        Assert.assertEquals(false, PitchParser.isPitchValid("'c"))
+        Assert.assertEquals(false, PitchParser.isPitchValid("c,is"))
+        Assert.assertEquals(false, PitchParser.isPitchValid("c"))
+        Assert.assertEquals(false, PitchParser.isPitchValid(""))
+    }
+
+    @Test
+    fun isPitchListValid() {
+        Assert.assertEquals(true, PitchParser.isPitchListValid(listOf<String>("c''", "e,", "g")))
+        Assert.assertEquals(false, PitchParser.isPitchListValid(listOf<String>("c", "e", "gs")))
+        Assert.assertEquals(false, PitchParser.isPitchListValid(listOf<String>("c", "e", "g,'")))
+    }
 }
