@@ -89,19 +89,34 @@
                 android:layout_marginRight="@dimen/commodore64_empty_row_size"
         />
 
-        <TextView
-                android:id="@+id/etLogTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="HERE GOES KEY INPUT!"
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView
+                    android:id="@+id/etLogTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HERE GOES KEY INPUT!"
 
-                android:fontFamily="@font/c64_pro"
-                android:textColor="@color/commodore64_14"
-                android:textSize="@dimen/commodore64_font_size"
-                android:textAllCaps="true"
-                android:layout_marginLeft="@dimen/commodore64_empty_row_size"
-                android:layout_marginRight="@dimen/commodore64_empty_row_size"
-        />
+                    android:fontFamily="@font/c64_pro"
+                    android:textColor="@color/commodore64_14"
+                    android:textSize="@dimen/commodore64_font_size"
+                    android:textAllCaps="true"
+                    android:layout_marginLeft="@dimen/commodore64_empty_row_size"
+                    android:layout_marginRight="@dimen/commodore64_empty_row_size"
+            />
+
+            <EditText
+                    android:id="@+id/etLog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:cursorVisible="false"
+                    android:textColor="#00000000"
+                    android:background="#00000000"
+                    android:inputType="textNoSuggestions" 
+            />
+        </RelativeLayout>
+
+
 
 
 
@@ -193,15 +208,7 @@
                 android:layout_marginRight="@dimen/commodore64_empty_row_size"
         />
 
-        <EditText
-                android:id="@+id/etLog"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:cursorVisible="false"
-                android:textColor="#00000000"
-                android:background="#00000000"
-        />
+
     </LinearLayout>
 
 
