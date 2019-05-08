@@ -5,98 +5,104 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activities.MainActivity"
-android:paddingLeft="10dp"
-android:paddingRight="10dp">
+        android:background="@color/commodore64_14"
+        tools:context=".practices.PracticeTestActivity">
 
-
-
-    <RelativeLayout
-            android:layout_width="368dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="76dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/commodore64_empty_row_size"
+            android:background="@color/commodore64_06"
+    >
 
         <TextView
-                android:id="@+id/tv_pass"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-        <TextView
-                android:id="@+id/tv_due"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true" />
-
-        <SeekBar
-                android:id="@+id/seek_bar"
+                android:id="@+id/toolbar_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_pass"
-                android:saveEnabled="false" />
-    </RelativeLayout>
+                android:text="@string/app_name"
+                android:background="@color/commodore64_07"
 
-    <Button
-            android:id="@+id/pauseBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:enabled="false"
-            android:text="Pause"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/playBtn"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                android:fontFamily="@font/c64_pro"
+                android:textColor="@color/commodore64_05"
+                android:textSize="@dimen/commodore64_font_size"
+                android:textAllCaps="true"
+                android:textAlignment="center"
 
-    <Button
-            android:id="@+id/playBtn"
-            android:layout_width="88dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="Play"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/stopBtn"
-            app:layout_constraintStart_toEndOf="@+id/pauseBtn"
-            app:layout_constraintTop_toTopOf="parent" />
+        />
 
-    <Button
-            android:id="@+id/stopBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginTop="8dp"
-            android:enabled="false"
-            android:text="Stop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome"
 
+                android:fontFamily="@font/c64_pro"
+                android:textColor="@color/commodore64_14"
+                android:textSize="@dimen/commodore64_font_size"
+                android:textAllCaps="true"
+                android:layout_marginLeft="@dimen/commodore64_empty_row_size"
+                android:layout_marginRight="@dimen/commodore64_empty_row_size"
+                android:layout_marginTop="@dimen/commodore64_empty_row_size"
+        />
 
-    <Button
-            android:id="@+id/btnRoomDatabase"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="120dp"
-            android:layout_marginTop="8dp"
-            android:text="RoomDatabase"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/playBtn"
-            app:layout_constraintVertical_bias="0.061"/>
+        <TextView
+                android:id="@+id/btnTestPractice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:padding="@dimen/commodore64_empty_row_size"
+                android:text="test practice"
+
+                android:fontFamily="@font/c64_pro"
+                android:textColor="@color/commodore64_14"
+                android:textSize="@dimen/commodore64_font_size"
+                android:textAllCaps="true"
+                android:background="@color/commodore64_03"
+                android:layout_marginLeft="@dimen/commodore64_empty_row_size"
+                android:layout_marginRight="@dimen/commodore64_empty_row_size"
+                android:layout_marginTop="@dimen/commodore64_empty_row_size"
+        />
+
+        <TextView
+                android:id="@+id/btnMeditation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:padding="@dimen/commodore64_empty_row_size"
+                android:text="meditation"
+
+                android:fontFamily="@font/c64_pro"
+                android:textColor="@color/commodore64_14"
+                android:textSize="@dimen/commodore64_font_size"
+                android:textAllCaps="true"
+                android:background="@color/commodore64_03"
+                android:layout_marginLeft="@dimen/commodore64_empty_row_size"
+                android:layout_marginRight="@dimen/commodore64_empty_row_size"
+                android:layout_marginTop="@dimen/commodore64_empty_row_size"
+        />
+
+        <TextView
+                android:id="@+id/btnRoomDatabase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/commodore64_empty_row_size"
+                android:text="RoomDatabase"
+
+                android:fontFamily="@font/c64_pro"
+                android:textColor="@color/commodore64_14"
+                android:textSize="@dimen/commodore64_font_size"
+                android:textAllCaps="true"
+                android:background="@color/commodore64_03"
+                android:layout_marginLeft="@dimen/commodore64_empty_row_size"
+                android:layout_marginRight="@dimen/commodore64_empty_row_size"
+                android:layout_marginTop="@dimen/commodore64_empty_row_size"
+        />
+
+    </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>
+
+
