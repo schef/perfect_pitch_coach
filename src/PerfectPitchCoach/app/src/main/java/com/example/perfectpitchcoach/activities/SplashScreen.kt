@@ -31,8 +31,10 @@ class SplashScreen : AppCompatActivity() {
 
         masterClassViewModel = ViewModelProviders.of(this).get(MasterClassViewModel::class.java)
 
-
-        if (AppPreferences.firstRun == false) {
+        val mainIntent = Intent(this@SplashScreen, MainActivity::class.java)
+        startActivity(mainIntent)
+        finish()
+        /* if (AppPreferences.firstRun == false) {
             //Log.d("Thrre Fragment", "The value of our pref is: ${AppPreferences.firstRun}")
 
             val mainIntent = Intent(this@SplashScreen, IntroductionActivity::class.java)
@@ -45,8 +47,6 @@ class SplashScreen : AppCompatActivity() {
                 try {
 
                     //delay(1000)
-
-
                     val curr = System.currentTimeMillis()
 
                     val retrofitService = RetrofitMainDataService().getRetrofit()
@@ -56,8 +56,6 @@ class SplashScreen : AppCompatActivity() {
                     val result2 =work2.await().await()
 
                     if (result2 != null) {
-
-
 
                         masterClassViewModel.allMasterClasses.observe( this@SplashScreen, Observer { masterClasses ->
 
@@ -134,7 +132,7 @@ class SplashScreen : AppCompatActivity() {
                     exception.printStackTrace()
                 }
             }
-        }
+        } */
     }
 
 
