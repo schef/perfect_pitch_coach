@@ -88,7 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/commodore64_empty_row_size"
-                android:text="RoomDatabase"
+                android:text="test backend RoomDatabase"
 
                 android:fontFamily="@font/c64_pro"
                 android:textColor="@color/commodore64_14"
