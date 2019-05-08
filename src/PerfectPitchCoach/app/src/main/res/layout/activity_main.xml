@@ -28,40 +28,7 @@
                 android:textSize="@dimen/commodore64_font_size"
                 android:textAllCaps="true"
                 android:textAlignment="center"
-        />
 
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="Log:"
-
-                android:fontFamily="@font/c64_pro"
-                android:textColor="@color/commodore64_14"
-                android:textSize="@dimen/commodore64_font_size"
-                android:textAllCaps="true"
-                android:layout_marginLeft="@dimen/commodore64_empty_row_size"
-                android:layout_marginRight="@dimen/commodore64_empty_row_size"
-                android:layout_marginTop="@dimen/commodore64_empty_row_size"
-        />
-
-
-        <TextView
-                android:id="@+id/tvLog"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Here goes log output!"
-
-                android:fontFamily="@font/c64_pro"
-                android:textColor="@color/commodore64_14"
-                android:textSize="@dimen/commodore64_font_size"
-                android:textAllCaps="true"
-                android:layout_marginLeft="@dimen/commodore64_empty_row_size"
-                android:layout_marginRight="@dimen/commodore64_empty_row_size"
-        />
-
-        <View android:layout_width="match_parent"
-              android:layout_height="@dimen/commodore64_empty_row_size"
         />
 
         <TextView
@@ -75,6 +42,7 @@
                 android:textAllCaps="true"
                 android:layout_marginLeft="@dimen/commodore64_empty_row_size"
                 android:layout_marginRight="@dimen/commodore64_empty_row_size"
+                android:layout_marginTop="@dimen/commodore64_empty_row_size"
         />
 
 
@@ -85,6 +53,7 @@
                 android:text=""
                 android:inputType="textNoSuggestions"
                 android:background="@android:color/transparent"
+                android:textCursorDrawable="@drawable/custom_edit_text_cursor"
 
                 android:fontFamily="@font/c64_pro"
                 android:textColor="@color/commodore64_14"
@@ -92,11 +61,6 @@
                 android:textAllCaps="true"
                 android:layout_marginLeft="@dimen/commodore64_empty_row_size"
                 android:layout_marginRight="@dimen/commodore64_empty_row_size"
-        />
-
-
-        <View android:layout_width="match_parent"
-              android:layout_height="@dimen/commodore64_empty_row_size"
         />
 
         <TextView
@@ -115,6 +79,7 @@
                 android:background="@color/commodore64_03"
                 android:layout_marginLeft="@dimen/commodore64_empty_row_size"
                 android:layout_marginRight="@dimen/commodore64_empty_row_size"
+                android:layout_marginTop="@dimen/commodore64_empty_row_size"
         />
 
         <TextView
@@ -172,6 +137,36 @@
                 android:layout_marginLeft="@dimen/commodore64_empty_row_size"
                 android:layout_marginRight="@dimen/commodore64_empty_row_size"
                 android:layout_marginTop="@dimen/commodore64_empty_row_size"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Log:"
+
+                android:fontFamily="@font/c64_pro"
+                android:textColor="@color/commodore64_14"
+                android:textSize="@dimen/commodore64_font_size"
+                android:textAllCaps="true"
+                android:layout_marginLeft="@dimen/commodore64_empty_row_size"
+                android:layout_marginRight="@dimen/commodore64_empty_row_size"
+                android:layout_marginTop="@dimen/commodore64_empty_row_size"
+        />
+
+
+        <TextView
+                android:id="@+id/tvLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+
+                android:fontFamily="@font/c64_pro"
+                android:textColor="@color/commodore64_14"
+                android:textSize="@dimen/commodore64_font_size"
+                android:textAllCaps="true"
+                android:layout_marginLeft="@dimen/commodore64_empty_row_size"
+                android:layout_marginRight="@dimen/commodore64_empty_row_size"
         />
 
     </LinearLayout>
