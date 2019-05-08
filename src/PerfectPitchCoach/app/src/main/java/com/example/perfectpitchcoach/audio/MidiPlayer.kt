@@ -11,8 +11,10 @@ import kotlin.concurrent.schedule
 object MidiPlayer {
 
     val noteDuration = 1000L
-    val firstTone = 21
-    val lastTone = 108
+//    val firstTone = 21
+//    val lastTone = 108
+    val firstTone = 60 - 12
+    val lastTone = 60 + 12
     var streamId = mutableMapOf<Int, Int>()
     var loadedSoundCount = 0
 

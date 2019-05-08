@@ -121,6 +121,39 @@
 
         </LinearLayout>
 
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="@dimen/commodore64_empty_row_size"
+                      android:layout_marginRight="@dimen/commodore64_empty_row_size"
+                      android:layout_marginTop="@dimen/commodore64_empty_row_size"
+        >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Id: "
+
+                    android:fontFamily="@font/c64_pro"
+                    android:textColor="@color/commodore64_14"
+                    android:textSize="@dimen/commodore64_font_size"
+                    android:textAllCaps="true"
+
+            />
+
+            <TextView
+                    android:id="@+id/tvId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+
+                    android:fontFamily="@font/c64_pro"
+                    android:textColor="@color/commodore64_14"
+                    android:textSize="@dimen/commodore64_font_size"
+                    android:textAllCaps="true"
+            />
+
+        </LinearLayout>
+
         <TextView
                 android:id="@+id/btnPlay"
                 android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package com.example.perfect_pitch_trainer.database
+package com.example.perfectpitchcoach.database
 
 import android.app.Activity
 import android.arch.lifecycle.Observer
@@ -10,6 +10,9 @@ import android.support.design.widget.FloatingActionButton
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.widget.Toast
+import com.example.perfect_pitch_trainer.database.NewWordActivity
+import com.example.perfect_pitch_trainer.database.UpdateDatabaseRoomActivity
+import com.example.perfect_pitch_trainer.database.WordListAdapter
 import com.example.perfect_pitch_trainer.database.model.MasterClass
 import com.example.perfect_pitch_trainer.database.viewModels.MasterClassViewModel
 import com.example.perfectpitchcoach.R
@@ -59,7 +62,7 @@ class RoomDatabaseExampleActivity : AppCompatActivity() {
                 val masterClass =
                     MasterClass( data.getStringExtra(NewWordActivity.EXTRA_REPLY_NAME),
                         data.getStringExtra(NewWordActivity.EXTRA_REPLY_STATUS))
-               masterClassViewModel.insert(masterClass)
+                masterClassViewModel.insert(masterClass)
             }
         }
         else if(  requestCode == userSolvedMasterClass && resultCode == Activity.RESULT_OK ) {

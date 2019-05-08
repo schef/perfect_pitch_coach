@@ -9,8 +9,8 @@ import android.widget.Button
 import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
-import com.example.perfect_pitch_trainer.database.RoomDatabaseExampleActivity
 import com.example.perfectpitchcoach.R
+import com.example.perfectpitchcoach.database.RoomDatabaseExampleActivity
 import com.example.perfectpitchcoach.practices.PracticeMeditationActivity
 import com.example.perfectpitchcoach.practices.PracticeTestActivity
 
