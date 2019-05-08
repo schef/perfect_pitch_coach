@@ -10,6 +10,7 @@ class PracticeMeditationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_practice_meditation)
 
         val tvPitch = findViewById<TextView>(R.id.tvPitch)

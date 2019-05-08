@@ -3,7 +3,9 @@
           package="com.example.perfectpitchcoach">
 
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
             android:name=".App"
             android:allowBackup="true"
@@ -12,15 +14,32 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".activities.SplashScreen">
 
-        <activity android:name=".practices.PracticeMeditationActivity"
-                  android:theme="@style/AppTheme.NoActionBar"
-        >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+
+        <activity android:name=".practices.PracticeMeditationActivity"
+                  android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.RegisterActivity">
+        </activity>
+        <activity android:name=".activities.PasswordUpdateActivity">
+        </activity>
+        <activity android:name=".activities.LoginActivity">
+        </activity>
+        <activity android:name=".activities.IntroductionActivity">
+        </activity>
+        <activity android:name=".activities.ForgotPasswordActivity">
+        </activity>
+        <activity
+                android:name=".practices.PracticeTestActivity"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".activities.MainActivity">
         </activity>
     </application>
 
