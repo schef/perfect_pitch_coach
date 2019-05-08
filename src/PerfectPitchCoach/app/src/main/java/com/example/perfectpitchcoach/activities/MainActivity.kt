@@ -9,7 +9,6 @@ import android.widget.Button
 import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
-import com.example.perfect_pitch_trainer.database.RoomDatabaseExampleActivity
 import com.example.perfectpitchcoach.R
 
 class MainActivity : AppCompatActivity() {
