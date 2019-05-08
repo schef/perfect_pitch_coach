@@ -27,19 +27,16 @@ class MainActivity : AppCompatActivity() {
         btnTestPractice.setOnClickListener {
             val mainIntent = Intent(this@MainActivity, PracticeTestActivity::class.java)
             startActivity(mainIntent)
-            finish()
         }
 
         btnMeditation.setOnClickListener {
             val mainIntent = Intent(this@MainActivity, PracticeMeditationActivity::class.java)
             startActivity(mainIntent)
-            finish()
         }
 
         btnRoomDatabase.setOnClickListener {
             val mainIntent = Intent(this@MainActivity, RoomDatabaseExampleActivity::class.java)
             startActivity(mainIntent)
-            finish()
         }
     }
 }
