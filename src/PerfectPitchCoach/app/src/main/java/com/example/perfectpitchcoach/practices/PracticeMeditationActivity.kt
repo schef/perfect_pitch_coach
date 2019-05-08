@@ -1,9 +1,10 @@
-package com.example.perfectpitchcoach
+package com.example.perfectpitchcoach.practices
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.example.perfectpitchcoach.R
 
-class PracticeMeditation : AppCompatActivity() {
+class PracticeMeditationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

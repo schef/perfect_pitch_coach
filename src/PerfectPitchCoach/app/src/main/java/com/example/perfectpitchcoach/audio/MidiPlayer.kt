@@ -1,13 +1,10 @@
-package com.example.perfectpitchcoach
+package com.example.perfectpitchcoach.audio
 
 import android.media.AudioAttributes
 import android.media.SoundPool
-import android.media.audiofx.LoudnessEnhancer
-import android.media.audiofx.PresetReverb
-import android.os.Build
-import android.support.annotation.RequiresApi
 import android.util.Log
 import android.widget.Toast
+import com.example.perfectpitchcoach.App
 import java.util.*
 import kotlin.concurrent.schedule
 
@@ -35,7 +32,9 @@ object MidiPlayer {
 
     init {
         for (x in firstTone..lastTone) {
-            soundPool.load(App.ref, getResNote(x), 1)
+            soundPool.load(
+                App.ref,
+                getResNote(x), 1)
         }
         soundPool.setOnLoadCompleteListener(SoundPool.OnLoadCompleteListener { soundPool, sampleId, status ->
 
@@ -73,7 +72,12 @@ object MidiPlayer {
         Timer().schedule(noteDuration) {
             noteOff(midi)
             if (pitchList.lastIndex > 0) {
-                playMultipleNotesMelodicly(pitchList.subList(1, pitchList.lastIndex + 1))
+                playMultipleNotesMelodicly(
+                    pitchList.subList(
+                        1,
+                        pitchList.lastIndex + 1
+                    )
+                )
             }
         }
     }

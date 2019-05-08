@@ -1,19 +1,16 @@
-package com.example.perfectpitchcoach
+package com.example.perfectpitchcoach.practices
 
-import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.Toolbar
-import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import android.text.Editable
 import android.text.InputFilter
-import android.text.TextWatcher
-import android.view.WindowManager
+import com.example.perfectpitchcoach.audio.MidiPlayer
+import com.example.perfectpitchcoach.audio.PitchParser
+import com.example.perfectpitchcoach.R
 
 
-class MainActivity : AppCompatActivity() {
+class PracticeTestActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

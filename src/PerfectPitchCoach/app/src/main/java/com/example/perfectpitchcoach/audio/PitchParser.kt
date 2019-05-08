@@ -1,6 +1,5 @@
-package com.example.perfectpitchcoach
+package com.example.perfectpitchcoach.audio
 
-import android.util.Log
 import kotlin.math.abs
 
 class PitchParser {
@@ -39,7 +38,9 @@ class PitchParser {
         }
 
         fun isMidiPitch(midi: Int, pitch: String): Boolean {
-            return getMidiBaseFromMidi(midi) == pitchMidiBase[getPitchBase(pitch)]
+            return getMidiBaseFromMidi(midi) == pitchMidiBase[getPitchBase(
+                pitch
+            )]
         }
 
         fun getMidiOctaveFromPitch(pitch: String): Int {

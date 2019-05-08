@@ -1,5 +1,6 @@
 package com.example.perfectpitchcoach
 
+import com.example.perfectpitchcoach.audio.PitchParser
 import org.junit.Assert
 import org.junit.Test
 
