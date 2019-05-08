@@ -10,6 +10,7 @@ import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
 import com.example.perfectpitchcoach.R
+import com.example.perfectpitchcoach.database.RoomDatabaseExampleActivity
 
 class MainActivity : AppCompatActivity() {
 
