@@ -3,6 +3,7 @@
           package="com.example.perfectpitchcoach">
 
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
             android:name=".App"
             android:allowBackup="true"
