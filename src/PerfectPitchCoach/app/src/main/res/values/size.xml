@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="commodore64_font_size">15sp</dimen>
-    <dimen name="commodore64_empty_row_size">20sp</dimen>
-    <dimen name="commodore64_empty_row_size_3x">60sp</dimen>
+    <dimen name="commodore64_empty_row_size">20dp</dimen>
+    <dimen name="commodore64_empty_row_size_3x">60dp</dimen>
 
 </resources>

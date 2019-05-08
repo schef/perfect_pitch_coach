@@ -16,30 +16,18 @@
             android:background="@color/commodore64_06"
     >
 
-        <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
+        <TextView
+                android:id="@+id/toolbar_title"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/commodore64_empty_row_size"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
                 android:background="@color/commodore64_07"
-        >
 
-            <TextView
-                    android:id="@+id/toolbar_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/app_name"
-
-                    android:fontFamily="@font/c64_pro"
-                    android:textColor="@color/commodore64_05"
-                    android:textSize="@dimen/commodore64_font_size"
-                    android:textAllCaps="true"
-                    android:layout_marginLeft="@dimen/commodore64_empty_row_size"
-                    android:layout_marginRight="@dimen/commodore64_empty_row_size"
-            />
-        </android.support.v7.widget.Toolbar>
-
-        <View android:layout_width="match_parent"
-              android:layout_height="@dimen/commodore64_empty_row_size"
+                android:fontFamily="@font/c64_pro"
+                android:textColor="@color/commodore64_05"
+                android:textSize="@dimen/commodore64_font_size"
+                android:textAllCaps="true"
+                android:textAlignment="center"
         />
 
         <TextView
@@ -54,8 +42,8 @@
                 android:textAllCaps="true"
                 android:layout_marginLeft="@dimen/commodore64_empty_row_size"
                 android:layout_marginRight="@dimen/commodore64_empty_row_size"
+                android:layout_marginTop="@dimen/commodore64_empty_row_size"
         />
-
 
 
         <TextView
@@ -89,35 +77,22 @@
                 android:layout_marginRight="@dimen/commodore64_empty_row_size"
         />
 
-        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView
-                    android:id="@+id/etLogTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="HERE GOES KEY INPUT!"
 
-                    android:fontFamily="@font/c64_pro"
-                    android:textColor="@color/commodore64_14"
-                    android:textSize="@dimen/commodore64_font_size"
-                    android:textAllCaps="true"
-                    android:layout_marginLeft="@dimen/commodore64_empty_row_size"
-                    android:layout_marginRight="@dimen/commodore64_empty_row_size"
-            />
+        <EditText
+                android:id="@+id/etLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:inputType="textNoSuggestions"
+                android:background="@android:color/transparent"
 
-            <EditText
-                    android:id="@+id/etLog"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:cursorVisible="false"
-                    android:textColor="#00000000"
-                    android:background="#00000000"
-                    android:inputType="textNoSuggestions" 
-            />
-        </RelativeLayout>
-
-
-
+                android:fontFamily="@font/c64_pro"
+                android:textColor="@color/commodore64_14"
+                android:textSize="@dimen/commodore64_font_size"
+                android:textAllCaps="true"
+                android:layout_marginLeft="@dimen/commodore64_empty_row_size"
+                android:layout_marginRight="@dimen/commodore64_empty_row_size"
+        />
 
 
         <View android:layout_width="match_parent"
@@ -126,7 +101,7 @@
 
         <TextView
                 android:id="@+id/btnMidiToPitch"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:clickable="true"
@@ -142,13 +117,9 @@
                 android:layout_marginRight="@dimen/commodore64_empty_row_size"
         />
 
-        <View android:layout_width="match_parent"
-              android:layout_height="@dimen/commodore64_empty_row_size"
-        />
-
         <TextView
                 android:id="@+id/btnPitchToMidi"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:clickable="true"
@@ -162,15 +133,12 @@
                 android:background="@color/commodore64_03"
                 android:layout_marginLeft="@dimen/commodore64_empty_row_size"
                 android:layout_marginRight="@dimen/commodore64_empty_row_size"
-        />
-
-        <View android:layout_width="match_parent"
-              android:layout_height="@dimen/commodore64_empty_row_size"
+                android:layout_marginTop="@dimen/commodore64_empty_row_size"
         />
 
         <TextView
                 android:id="@+id/btnPlayNotesMelodicly"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:clickable="true"
@@ -184,15 +152,12 @@
                 android:background="@color/commodore64_03"
                 android:layout_marginLeft="@dimen/commodore64_empty_row_size"
                 android:layout_marginRight="@dimen/commodore64_empty_row_size"
-        />
-
-        <View android:layout_width="match_parent"
-              android:layout_height="@dimen/commodore64_empty_row_size"
+                android:layout_marginTop="@dimen/commodore64_empty_row_size"
         />
 
         <TextView
                 android:id="@+id/btnPlayNotesHarmonicly"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:clickable="true"
@@ -206,8 +171,8 @@
                 android:background="@color/commodore64_03"
                 android:layout_marginLeft="@dimen/commodore64_empty_row_size"
                 android:layout_marginRight="@dimen/commodore64_empty_row_size"
+                android:layout_marginTop="@dimen/commodore64_empty_row_size"
         />
-
 
     </LinearLayout>
 
