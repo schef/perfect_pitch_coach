@@ -14,21 +14,25 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+
         <activity android:name=".activities.SplashScreen" android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
         <activity android:name=".database.RoomDatabaseExampleActivity"/>
-        <activity android:name=".practices.PracticeMeditationActivity" android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".activities.RegisterActivity"/>
         <activity android:name=".activities.PasswordUpdateActivity"/>
         <activity android:name=".activities.LoginActivity"/>
         <activity android:name=".activities.IntroductionActivity"/>
         <activity android:name=".activities.ForgotPasswordActivity"/>
+
+        <activity android:name=".practices.PracticeMeditationActivity" android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".practices.PracticeTestActivity" android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".activities.MainActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".practices.JsonListActivity" android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

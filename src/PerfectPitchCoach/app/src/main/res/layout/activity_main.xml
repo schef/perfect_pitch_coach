@@ -84,6 +84,25 @@
         />
 
         <TextView
+                android:id="@+id/btnJsonList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:padding="@dimen/commodore64_empty_row_size"
+                android:text="json list"
+
+                android:fontFamily="@font/c64_pro"
+                android:textColor="@color/commodore64_14"
+                android:textSize="@dimen/commodore64_font_size"
+                android:textAllCaps="true"
+                android:background="@color/commodore64_03"
+                android:layout_marginLeft="@dimen/commodore64_empty_row_size"
+                android:layout_marginRight="@dimen/commodore64_empty_row_size"
+                android:layout_marginTop="@dimen/commodore64_empty_row_size"
+        />
+
+        <TextView
                 android:id="@+id/btnRoomDatabase"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

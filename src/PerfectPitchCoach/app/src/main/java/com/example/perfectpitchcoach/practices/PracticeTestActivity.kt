@@ -8,6 +8,7 @@ import android.text.InputFilter
 import com.example.perfectpitchcoach.audio.MidiPlayer
 import com.example.perfectpitchcoach.audio.PitchParser
 import com.example.perfectpitchcoach.R
+import kotlinx.android.synthetic.main.activity_practice_test.*
 
 
 class PracticeTestActivity : AppCompatActivity() {
@@ -16,13 +17,6 @@ class PracticeTestActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_practice_test)
 
-        val tvLog = findViewById<TextView>(R.id.tvLog)
-        val etLog = findViewById<EditText>(R.id.etLog)
-//        val etLogTv = findViewById<TextView>(R.id.etLogTv)
-        val btnMidiToPitch = findViewById<TextView>(R.id.btnMidiToPitch)
-        val btnPitchToMidi = findViewById<TextView>(R.id.btnPitchToMidi)
-        val btnPlayNotesMelodicly = findViewById<TextView>(R.id.btnPlayNotesMelodicly)
-        val btnPlayNotesHarmonicly = findViewById<TextView>(R.id.btnPlayNotesHarmonicly)
         MidiPlayer
 
         etLog.filters = arrayOf(InputFilter.AllCaps())

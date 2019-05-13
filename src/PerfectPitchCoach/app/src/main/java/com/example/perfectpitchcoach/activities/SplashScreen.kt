@@ -34,6 +34,7 @@ class SplashScreen : AppCompatActivity() {
         val mainIntent = Intent(this@SplashScreen, MainActivity::class.java)
         startActivity(mainIntent)
         finish()
+        
         /* if (AppPreferences.firstRun == false) {
             //Log.d("Thrre Fragment", "The value of our pref is: ${AppPreferences.firstRun}")
 

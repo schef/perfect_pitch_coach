@@ -11,18 +11,16 @@ import android.widget.TextView
 import android.widget.Toast
 import com.example.perfectpitchcoach.R
 import com.example.perfectpitchcoach.database.RoomDatabaseExampleActivity
+import com.example.perfectpitchcoach.practices.JsonListActivity
 import com.example.perfectpitchcoach.practices.PracticeMeditationActivity
 import com.example.perfectpitchcoach.practices.PracticeTestActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val btnTestPractice = findViewById<TextView>(R.id.btnTestPractice)
-        val btnMeditation = findViewById<TextView>(R.id.btnMeditation)
-        val btnRoomDatabase = findViewById<TextView>(R.id.btnRoomDatabase)
 
         btnTestPractice.setOnClickListener {
             val mainIntent = Intent(this@MainActivity, PracticeTestActivity::class.java)
@@ -31,6 +29,11 @@ class MainActivity : AppCompatActivity() {
 
         btnMeditation.setOnClickListener {
             val mainIntent = Intent(this@MainActivity, PracticeMeditationActivity::class.java)
+            startActivity(mainIntent)
+        }
+
+        btnJsonList.setOnClickListener {
+            val mainIntent = Intent(this@MainActivity, JsonListActivity::class.java)
             startActivity(mainIntent)
         }
 

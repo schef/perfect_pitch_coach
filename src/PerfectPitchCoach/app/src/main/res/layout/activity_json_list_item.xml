@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Single List Item Design -->
+
+<TextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tvItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:padding="@dimen/commodore64_empty_row_size"
+        android:text="item 1"
+
+        android:fontFamily="@font/c64_pro"
+        android:textColor="@color/commodore64_14"
+        android:textSize="@dimen/commodore64_font_size"
+        android:textAllCaps="true"
+        android:background="@color/commodore64_03"
+        android:layout_marginLeft="@dimen/commodore64_empty_row_size"
+        android:layout_marginRight="@dimen/commodore64_empty_row_size"
+        android:layout_marginTop="@dimen/commodore64_empty_row_size"
+/>
