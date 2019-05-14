@@ -1,14 +1,13 @@
 package com.example.perfectpitchcoach.practices
 
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.perfectpitchcoach.App
 import com.example.perfectpitchcoach.R
 import kotlinx.android.synthetic.main.activity_json_list_item.view.*
-import android.support.v7.widget.CardView
-import android.widget.LinearLayout
 
 class JsonListAdapter(val items: List<JsonListEntity.ListItem>?) :
     RecyclerView.Adapter<JsonListAdapter.ViewHolder>() {
@@ -27,7 +26,19 @@ class JsonListAdapter(val items: List<JsonListEntity.ListItem>?) :
     }
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+
+        private var onItemClickListener: View.OnClickListener? = null
+
+        fun setItemClickListener(clickListener: View.OnClickListener) {
+            onItemClickListener = clickListener
+        }
+
         val tvItemName = view.tvItemName
         val tvItemPercent = view.tvItemPercent
+
+        init {
+            view.setTag(App.ref)
+            view.setOnClickListener(onItemClickListener)
+        }
     }
 }

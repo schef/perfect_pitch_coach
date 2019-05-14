@@ -5,10 +5,10 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import com.example.perfectpitchcoach.R
-import com.example.perfectpitchcoach.practices.JsonListEntity.ListInfo
 import kotlinx.android.synthetic.main.activity_json_list.*
-
-//https://medium.com/@hinchman_amanda/working-with-recyclerview-in-android-kotlin-84a62aef94ec
+import android.support.v7.widget.RecyclerView
+import com.example.perfectpitchcoach.App
+import kotlinx.android.synthetic.main.activity_json_list.view.*
 
 class JsonListActivity : AppCompatActivity() {
 
@@ -20,10 +20,19 @@ class JsonListActivity : AppCompatActivity() {
 
         tvTitle.setText(jsonList?.description)
 
+        tvTitle.setOnClickListener {
+            Log.e("JsonListActivity", "Kaj ima")
+        }
+
         Log.e("JsonListActivity", jsonList.toString())
 
-        rvList.layoutManager = LinearLayoutManager(this)
+        rvList.layoutManager = LinearLayoutManager(App.ref)
         rvList.adapter = JsonListAdapter(jsonList?.list)
 
+        rvList.setOnClickListener {
+            val viewHolder = it.getTag() as RecyclerView.ViewHolder
+            val position = viewHolder.adapterPosition
+            Log.e("JsonListActivity", "Kaj ima: " + jsonList?.list?.get(position)?.filename.toString())
+        }
     }
 }
