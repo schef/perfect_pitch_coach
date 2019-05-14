@@ -1,15 +1,14 @@
 package com.example.perfectpitchcoach.practices
 
 import com.example.perfectpitchcoach.App
-import com.example.perfectpitchcoach.R
 import com.google.gson.Gson
 
-object ListEntity {
+object JsonListEntity {
 
-    fun getListFromJsonRaw(id: Int): ListEntity.ListInfo? {
+    fun getListFromJsonRaw(id: Int): JsonListEntity.ListInfo? {
         val objectArrayString: String =
             App.ref.resources.openRawResource(id).bufferedReader().use { it.readText() }
-        return Gson().fromJson(objectArrayString, ListEntity.ListInfo::class.java)
+        return Gson().fromJson(objectArrayString, JsonListEntity.ListInfo::class.java)
     }
 
     data class ListInfo (

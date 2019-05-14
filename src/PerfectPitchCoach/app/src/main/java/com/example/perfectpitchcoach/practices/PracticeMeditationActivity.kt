@@ -3,13 +3,9 @@ package com.example.perfectpitchcoach.practices
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import android.widget.TextView
 import com.example.perfectpitchcoach.R
 import com.example.perfectpitchcoach.audio.MidiPlayer
-import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_practice_meditation.*
-import java.io.IOException
-import java.io.InputStream
 
 class PracticeMeditationActivity : AppCompatActivity() {
 
@@ -18,7 +14,7 @@ class PracticeMeditationActivity : AppCompatActivity() {
     var practice: PracticeEntity.PracticeInfo? = null
 
     fun init() {
-        practice = PracticeEntity.getPracticeFromJsonRaw(R.raw.masterclass_00_03)
+        practice = PracticeEntity.getPracticeInfoFromJsonRaw(R.raw.masterclass_00_03)
         tvScoreMax.text = practice?.maxHits.toString()
         tvDescription.text = practice?.description
         Log.e("PracticeMeditation", practice.toString())

@@ -7,6 +7,7 @@ import com.example.perfectpitchcoach.R
 import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.activity_json_list.*
 
+//https://medium.com/@hinchman_amanda/working-with-recyclerview-in-android-kotlin-84a62aef94ec
 
 class JsonListActivity : AppCompatActivity() {
 
@@ -17,7 +18,7 @@ class JsonListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(com.example.perfectpitchcoach.R.layout.activity_json_list)
 
-        val jsonList = ListEntity.getListFromJsonRaw(R.raw.masterclasses)
+        val jsonList = JsonListEntity.getListFromJsonRaw(R.raw.masterclasses)
 
 //        Log.e("JsonListActivity", jsonList.toString())
 

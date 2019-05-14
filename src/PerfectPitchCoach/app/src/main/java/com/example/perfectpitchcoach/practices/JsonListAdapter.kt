@@ -1,19 +1,14 @@
 package com.example.perfectpitchcoach.practices
 
-import android.R.attr.name
 import android.R
 import android.content.Context
-import android.widget.TextView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.R.attr.name
-import kotlinx.android.synthetic.main.activity_json_list_item.*
-import kotlinx.android.synthetic.main.activity_json_list.*
 
 
-class JsonListAdapter(context: Context, items: ArrayList<ListEntity>) : ArrayAdapter<ListEntity>(context, 0, items) {
+class JsonListAdapter(context: Context, items: ArrayList<JsonListEntity>) : ArrayAdapter<JsonListEntity>(context, 0, items) {
 
     @Override
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View? {

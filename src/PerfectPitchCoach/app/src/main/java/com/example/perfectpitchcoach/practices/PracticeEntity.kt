@@ -6,9 +6,9 @@ import com.google.gson.Gson
 
 object PracticeEntity {
 
-    fun getPracticeFromJsonRaw(id: Int): PracticeEntity.PracticeInfo? {
+    fun getPracticeInfoFromJsonRaw(id: Int): PracticeEntity.PracticeInfo? {
         val objectArrayString: String =
-            App.ref.resources.openRawResource(R.raw.masterclass_00_03).bufferedReader().use { it.readText() }
+            App.ref.resources.openRawResource(id).bufferedReader().use { it.readText() }
         return Gson().fromJson(objectArrayString, PracticeEntity.PracticeInfo::class.java)
     }
 
