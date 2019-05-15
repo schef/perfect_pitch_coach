@@ -9,36 +9,34 @@ import com.example.perfectpitchcoach.App
 import com.example.perfectpitchcoach.R
 import kotlinx.android.synthetic.main.activity_json_list_item.view.*
 
-class JsonListAdapter(val items: List<JsonListEntity.ListItem>?) :
-    RecyclerView.Adapter<JsonListAdapter.ViewHolder>() {
+class JsonListAdapter : RecyclerView.Adapter<JsonListAdapter.ViewHolder>() {
+    var items = listOf<JsonListEntity.ListItem>()
+        private set
+
+    fun updateItems(items: List<JsonListEntity.ListItem>) {
+        this.items = items
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(App.ref).inflate(R.layout.activity_json_list_item, parent, false))
     }
 
     override fun getItemCount(): Int {
-        return items!!.size
+        return items.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tvItemName.text = items!!.get(position).name
-        holder.tvItemPercent.text = 0.toString()
+        holder.bind(items[position])
     }
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        private val tvItemName = view.tvItemName
+        private val tvItemPercent = view.tvItemPercent
 
-        private var onItemClickListener: View.OnClickListener? = null
-
-        fun setItemClickListener(clickListener: View.OnClickListener) {
-            onItemClickListener = clickListener
-        }
-
-        val tvItemName = view.tvItemName
-        val tvItemPercent = view.tvItemPercent
-
-        init {
-            view.setTag(App.ref)
-            view.setOnClickListener(onItemClickListener)
+        fun bind(item: JsonListEntity.ListItem) {
+            tvItemName.text = item.name
+            tvItemPercent.text = 0.toString()
         }
     }
 }
