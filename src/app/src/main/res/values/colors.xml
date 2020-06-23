@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- theme colors -->
+    <color name="colorPrimary">#111022</color>
+    <color name="colorPrimaryAlt1">#0C223F</color>
+    <color name="colorPrimaryAlt2">#0D1730</color>
+    <color name="colorPrimaryAlt3">#0D1D37</color>
+
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#9000ff</color>
+    <color name="colorAccentDark">#28094D</color>
+    <color name="colorAccentAlt">#fc00fc</color>
+
+    <color name="textColorPrimary">#00f2ff</color>
+    <color name="textColorSecondary">#ffffff</color>
+    <color name="textColorHint">#a0a0a0</color>
+
+    <color name="colorForeground">#fafafa</color>
+    <color name="colorButtonNormal">#616161</color>
+
+    <!-- button colors -->
+    <color name="colorButtonDisabled">#433f5a</color>
+
+    <!-- various color options -->
+    <color name="colorCustomCyan">@color/textColorPrimary</color>
+    <color name="colorCustomPurple">@color/colorAccent</color>
+    <color name="colorCustomPink">@color/colorAccentAlt</color>
+    <color name="colorCustomGreen">#aeff60</color>
+    <color name="colorCustomRed">#de4c4c</color>
+    <color name="colorCustomOrange">#f9c54d</color>
+</resources>
